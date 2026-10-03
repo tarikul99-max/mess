@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>মেস মিল ও হিসাব সিস্টেম </title>
+    <title>মেস মিল ও হিসাব সিস্টেম</title>
     <link rel="icon" type="image/x-icon" href="logo.jpeg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -276,33 +276,40 @@
 
         <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex-grow w-full">
 
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
                 <div class="bg-white dark:bg-slate-900 rounded-2xl p-4 shadow-sm border border-slate-200 dark:border-slate-800 flex items-center gap-3">
                     <div class="w-11 h-11 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-bowl-rice"></i></div>
                     <div>
-                        <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">মোট মেস মিল</p>
-                        <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100" id="totalMessMeals">0.0</h3>
+                        <p class="text-[10px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">মোট মিল</p>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-800 dark:text-slate-100" id="totalMessMeals">0.0</h3>
                     </div>
                 </div>
                 <div class="bg-white dark:bg-slate-900 rounded-2xl p-4 shadow-sm border border-slate-200 dark:border-slate-800 flex items-center gap-3">
                     <div class="w-11 h-11 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-hand-holding-dollar"></i></div>
                     <div>
-                        <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">মোট জমা</p>
-                        <h3 class="text-xl font-bold text-emerald-600 dark:text-emerald-400">৳<span id="totalMessDeposit">0</span></h3>
+                        <p class="text-[10px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">মোট জমা</p>
+                        <h3 class="text-lg sm:text-xl font-bold text-emerald-600 dark:text-emerald-400">৳<span id="totalMessDeposit">0</span></h3>
                     </div>
                 </div>
                 <div class="bg-white dark:bg-slate-900 rounded-2xl p-4 shadow-sm border border-slate-200 dark:border-slate-800 flex items-center gap-3">
                     <div class="w-11 h-11 rounded-xl bg-rose-50 dark:bg-rose-950/60 text-rose-600 dark:text-rose-400 flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-cart-shopping"></i></div>
                     <div>
-                        <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">মোট বাজার</p>
-                        <h3 class="text-xl font-bold text-slate-800 dark:text-slate-100">৳<span id="totalMessBazar">0</span></h3>
+                        <p class="text-[10px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">মোট বাজার</p>
+                        <h3 class="text-lg sm:text-xl font-bold text-slate-800 dark:text-slate-100">৳<span id="totalMessBazar">0</span></h3>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-slate-900 rounded-2xl p-4 shadow-sm border border-slate-200 dark:border-slate-800 flex items-center gap-3">
+                    <div class="w-11 h-11 rounded-xl bg-orange-50 dark:bg-orange-950/60 text-orange-600 dark:text-orange-400 flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-fire-flame-curved"></i></div>
+                    <div>
+                        <p class="text-[10px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">গ্যাস বিল</p>
+                        <h3 class="text-lg sm:text-xl font-bold text-orange-600 dark:text-orange-400">৳<span id="totalGasBill">0</span></h3>
                     </div>
                 </div>
                 <div class="bg-white dark:bg-slate-900 rounded-2xl p-4 shadow-sm border border-slate-200 dark:border-slate-800 flex items-center gap-3">
                     <div class="w-11 h-11 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-lg shrink-0"><i class="fa-solid fa-calculator"></i></div>
                     <div>
-                        <p class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">মিল রেট</p>
-                        <h3 class="text-xl font-bold text-amber-600 dark:text-amber-400">৳<span id="currentMealRate">0.00</span></h3>
+                        <p class="text-[10px] sm:text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase">মিল রেট</p>
+                        <h3 class="text-lg sm:text-xl font-bold text-amber-600 dark:text-amber-400">৳<span id="currentMealRate">0.00</span></h3>
                     </div>
                 </div>
             </div>
@@ -325,6 +332,9 @@
                 </button>
                 <button onclick="switchTab('bazar')" id="tab-bazar" class="tab-btn flex-1 py-2.5 px-3 rounded-xl font-semibold text-xs sm:text-sm transition text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/60 flex items-center justify-center gap-2 shrink-0">
                     <i class="fa-solid fa-basket-shopping text-rose-500"></i><span>বাজার</span>
+                </button>
+                <button onclick="switchTab('gas')" id="tab-gas" class="tab-btn flex-1 py-2.5 px-3 rounded-xl font-semibold text-xs sm:text-sm transition text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/60 flex items-center justify-center gap-2 shrink-0">
+                    <i class="fa-solid fa-fire-flame-curved text-orange-500"></i><span>গ্যাস বিল</span>
                 </button>
                 <button onclick="switchTab('summary')" id="tab-summary" class="tab-btn flex-1 py-2.5 px-3 rounded-xl font-semibold text-xs sm:text-sm transition text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/60 flex items-center justify-center gap-2 shrink-0">
                     <i class="fa-solid fa-chart-pie text-amber-500"></i><span>সারসংক্ষেপ</span>
@@ -361,7 +371,7 @@
                 </div>
             </section>
 
-            <!-- 🗳️ DAILY POLLS -->
+            <!-- DAILY POLLS -->
             <section id="content-polls" class="tab-content hidden">
                 <div class="bg-white dark:bg-slate-900 rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200 dark:border-slate-800 mb-4">
                     <div class="flex flex-wrap justify-between items-center gap-3">
@@ -497,12 +507,12 @@
                             </div>
                             <div>
                                 <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">ক্যাটাগরি</label>
-                                <input type="text" id="bazarCategory" placeholder="গ্যাস, চাল/ডাল..." required class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-indigo-500 font-semibold text-indigo-600 dark:text-indigo-400">
+                                <input type="text" id="bazarCategory" placeholder="চাল/ডাল, মাছ/মাংস..." required class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-indigo-500 font-semibold text-indigo-600 dark:text-indigo-400">
                                 <div class="flex flex-wrap gap-1.5 mt-2">
-                                    <button type="button" onclick="setCategorySuggestion('গ্যাস সিলিন্ডার')" class="text-[10px] bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800 px-2 py-0.5 rounded-md hover:bg-amber-100 transition">গ্যাস</button>
                                     <button type="button" onclick="setCategorySuggestion('চাল/ডাল/তেল')" class="text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 px-2 py-0.5 rounded-md hover:bg-slate-200 transition">চাল/ডাল</button>
                                     <button type="button" onclick="setCategorySuggestion('মাছ ও মাংস')" class="text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 px-2 py-0.5 rounded-md hover:bg-slate-200 transition">মাছ/মাংস</button>
                                     <button type="button" onclick="setCategorySuggestion('সবজি')" class="text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 px-2 py-0.5 rounded-md hover:bg-slate-200 transition">সবজি</button>
+                                    <button type="button" onclick="setCategorySuggestion('মশলা')" class="text-[10px] bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 px-2 py-0.5 rounded-md hover:bg-slate-200 transition">মশলা</button>
                                 </div>
                             </div>
                             <div>
@@ -511,7 +521,7 @@
                             </div>
                             <div>
                                 <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">বিবরণ</label>
-                                <input type="text" id="bazarNote" placeholder="১২কেজি সিলিন্ডার" class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-indigo-500">
+                                <input type="text" id="bazarNote" placeholder="বিস্তারিত" class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-indigo-500">
                             </div>
                             <button type="submit" class="w-full bg-rose-600 hover:bg-rose-700 text-white font-semibold py-2.5 rounded-lg text-xs shadow transition">বাজার সেভ</button>
                         </form>
@@ -540,6 +550,75 @@
                 </div>
             </section>
 
+            <!-- 🔥 GAS BILL -->
+            <section id="content-gas" class="tab-content hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <!-- Add Gas Bill Form -->
+                    <div class="bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border-2 border-orange-200 dark:border-orange-800 h-fit">
+                        <h2 class="text-base font-bold text-slate-800 dark:text-slate-100 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-fire-flame-curved text-orange-500"></i><span>নতুন গ্যাস বিল</span>
+                        </h2>
+                        <form id="gasForm" onsubmit="handleAddGasBill(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">বিলের মাস</label>
+                                <input type="month" id="gasBillMonth" required class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-orange-500 font-semibold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">তারিখ (জমা দেওয়ার)</label>
+                                <input type="date" id="gasBillDate" required class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-orange-500">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">কে পেমেন্ট করেছেন?</label>
+                                <select id="gasBillMemberSelect" required class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-orange-500"></select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">বিলের পরিমাণ (৳)</label>
+                                <input type="number" step="0.01" id="gasBillAmount" placeholder="৮৫০" required class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-orange-500 font-bold text-orange-600">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">নোট (ঐচ্ছিক)</label>
+                                <input type="text" id="gasBillNote" placeholder="যেমন: তিতাস গ্যাস / ক্যাশ" class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-orange-500">
+                            </div>
+                            <button type="submit" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2.5 rounded-lg text-xs shadow transition flex items-center justify-center gap-1.5">
+                                <i class="fa-solid fa-plus-circle"></i><span>গ্যাস বিল সেভ</span>
+                            </button>
+                        </form>
+                        <div class="mt-4 bg-orange-50 dark:bg-orange-950/40 border border-orange-200 dark:border-orange-800 rounded-xl p-3 text-[11px] text-orange-900 dark:text-orange-200">
+                            <i class="fa-solid fa-info-circle text-orange-500 mr-1"></i>
+                            <strong>টিপস:</strong> গ্যাস বিল মোট মেম্বারের সমান ভাগ হবে। মিল রেটে যোগ হবে না।
+                        </div>
+                    </div>
+
+                    <!-- Gas Bill List -->
+                    <div class="lg:col-span-2 bg-white dark:bg-slate-900 rounded-2xl p-5 shadow-sm border border-slate-200 dark:border-slate-800">
+                        <h2 class="text-base font-bold text-slate-800 dark:text-slate-100 mb-4 flex items-center justify-between">
+                            <span class="flex items-center gap-2">
+                                <i class="fa-solid fa-fire-flame-curved text-orange-500"></i>
+                                <span>গ্যাস বিলের ইতিহাস</span>
+                            </span>
+                            <span class="text-xs bg-orange-50 dark:bg-orange-950/60 text-orange-700 dark:text-orange-400 font-bold px-2.5 py-1 rounded-full border border-orange-200 dark:border-orange-800">
+                                মোট: ৳<span id="gasTotalSum">0</span>
+                            </span>
+                        </h2>
+                        <div class="overflow-x-auto max-h-[500px]">
+                            <table class="w-full text-xs text-left">
+                                <thead class="bg-orange-50 dark:bg-orange-950/40 text-slate-700 dark:text-slate-300 uppercase sticky top-0">
+                                    <tr>
+                                        <th class="p-3">বিলের মাস</th>
+                                        <th class="p-3">জমার তারিখ</th>
+                                        <th class="p-3">কে দিয়েছে</th>
+                                        <th class="p-3">নোট</th>
+                                        <th class="p-3 text-right">৳</th>
+                                        <th class="p-3 text-center">অ্যাকশন</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="gasListTable" class="divide-y divide-slate-100 dark:divide-slate-800"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <!-- SUMMARY -->
             <section id="content-summary" class="tab-content hidden">
                 <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-800">
@@ -552,6 +631,31 @@
                             <i class="fa-solid fa-print mr-1.5"></i> প্রিন্ট
                         </button>
                     </div>
+
+                    <!-- Cost Breakdown -->
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6">
+                        <div class="bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 rounded-xl p-3 text-center">
+                            <p class="text-[10px] text-rose-600 dark:text-rose-300 font-bold uppercase">মোট বাজার</p>
+                            <p class="text-lg font-bold text-rose-700 dark:text-rose-200">৳<span id="summaryBazarTotal">0</span></p>
+                        </div>
+                        <div class="bg-orange-50 dark:bg-orange-950/40 border border-orange-200 dark:border-orange-800 rounded-xl p-3 text-center">
+                            <p class="text-[10px] text-orange-600 dark:text-orange-300 font-bold uppercase">মোট গ্যাস বিল</p>
+                            <p class="text-lg font-bold text-orange-700 dark:text-orange-200">৳<span id="summaryGasTotal">0</span></p>
+                        </div>
+                        <div class="bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 rounded-xl p-3 text-center">
+                            <p class="text-[10px] text-amber-600 dark:text-amber-300 font-bold uppercase">গ্যাস/জন</p>
+                            <p class="text-lg font-bold text-amber-700 dark:text-amber-200">৳<span id="summaryGasPerPerson">0</span></p>
+                        </div>
+                        <div class="bg-indigo-50 dark:bg-indigo-950/40 border border-indigo-200 dark:border-indigo-800 rounded-xl p-3 text-center">
+                            <p class="text-[10px] text-indigo-600 dark:text-indigo-300 font-bold uppercase">মোট খরচ</p>
+                            <p class="text-lg font-bold text-indigo-700 dark:text-indigo-200">৳<span id="summaryTotalCost">0</span></p>
+                        </div>
+                        <div class="bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 rounded-xl p-3 text-center">
+                            <p class="text-[10px] text-amber-600 dark:text-amber-300 font-bold uppercase">মিল রেট</p>
+                            <p class="text-lg font-bold text-amber-700 dark:text-amber-200">৳<span id="summaryMealRate">0.00</span></p>
+                        </div>
+                    </div>
+
                     <div class="overflow-x-auto">
                         <table class="w-full text-xs text-left">
                             <thead class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 uppercase font-semibold">
@@ -559,6 +663,7 @@
                                     <th class="p-3.5">মেম্বার</th>
                                     <th class="p-3.5 text-center">মোট মিল</th>
                                     <th class="p-3.5 text-right">মিল খরচ (৳)</th>
+                                    <th class="p-3.5 text-right">🔥 গ্যাস শেয়ার (৳)</th>
                                     <th class="p-3.5 text-right">জমা (৳)</th>
                                     <th class="p-3.5 text-right font-bold">ব্যালেন্স</th>
                                 </tr>
@@ -653,6 +758,40 @@
                 <div class="flex gap-2 pt-2">
                     <button onclick="closeEditDepositModal()" class="w-1/2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold py-2.5 rounded-xl text-xs">বাতিল</button>
                     <button onclick="saveEditDeposit()" class="w-1/2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 rounded-xl text-xs shadow">আপডেট</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDIT GAS BILL MODAL -->
+    <div id="editGasModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 w-full max-w-sm shadow-2xl border border-slate-100 dark:border-slate-800">
+            <h3 class="text-base font-bold text-slate-800 dark:text-slate-100 mb-4 flex items-center gap-2"><i class="fa-solid fa-pen-to-square text-orange-500"></i><span>গ্যাস বিল এডিট</span></h3>
+            <div class="space-y-4">
+                <input type="hidden" id="editGasId">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">বিলের মাস</label>
+                    <input type="month" id="editGasMonth" required class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-orange-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">জমার তারিখ</label>
+                    <input type="date" id="editGasDate" required class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-orange-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">কে দিয়েছে</label>
+                    <select id="editGasMemberSelect" required class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-orange-500"></select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">পরিমাণ (৳)</label>
+                    <input type="number" step="0.01" id="editGasAmount" required class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-orange-500 font-bold text-orange-600">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">নোট</label>
+                    <input type="text" id="editGasNote" class="w-full border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-xs focus:ring-2 focus:ring-orange-500">
+                </div>
+                <div class="flex gap-2 pt-2">
+                    <button onclick="closeEditGasModal()" class="w-1/2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold py-2.5 rounded-xl text-xs">বাতিল</button>
+                    <button onclick="saveEditGas()" class="w-1/2 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2.5 rounded-xl text-xs shadow">আপডেট</button>
                 </div>
             </div>
         </div>
@@ -788,6 +927,7 @@
         let mealsData = {};
         let depositData = [];
         let bazarData = [];
+        let gasBillData = [];
         let polls = {};
 
         let pendingVote = null;
@@ -811,6 +951,10 @@
 
             const pdp = document.getElementById('pollDatePicker');
             if (pdp) pdp.value = new Date().toISOString().slice(0, 10);
+            const gbm = document.getElementById('gasBillMonth');
+            if (gbm) gbm.value = selectedMonth;
+            const gbd = document.getElementById('gasBillDate');
+            if (gbd) gbd.value = new Date().toISOString().slice(0, 10);
 
             const savedMessId = localStorage.getItem('current_mess_id');
             const savedViewPwd = localStorage.getItem('current_mess_viewpwd');
@@ -916,6 +1060,7 @@
                         mealsData: {},
                         depositData: [],
                         bazarData: [],
+                        gasBillData: [],
                         polls: {}
                     }
                 };
@@ -962,6 +1107,8 @@
                 if (data.mealsData) mealsData = data.mealsData;
                 if (Array.isArray(data.depositData)) depositData = data.depositData;
                 if (Array.isArray(data.bazarData)) bazarData = data.bazarData;
+                if (Array.isArray(data.gasBillData)) gasBillData = data.gasBillData;
+                else gasBillData = [];
                 if (data.polls && typeof data.polls === 'object') polls = data.polls;
                 else polls = {};
 
@@ -985,7 +1132,7 @@
             if (!firebaseReady || !currentMessId || isRemoteUpdate) return;
             db.ref(`messes/${currentMessId}/data`).set({
                 messDetails, members, mealsData, depositData, bazarData,
-                polls, lastUpdated: Date.now()
+                gasBillData, polls, lastUpdated: Date.now()
             }).catch(err => console.error('Push error:', err));
         }
 
@@ -997,7 +1144,7 @@
             localStorage.removeItem('current_mess_adminpwd');
             localStorage.removeItem('current_mess_isadmin');
             currentMessId = null; currentMessMeta = null; isAdmin = false;
-            members = []; mealsData = {}; depositData = []; bazarData = []; polls = {};
+            members = []; mealsData = {}; depositData = []; bazarData = []; gasBillData = []; polls = {};
             document.getElementById('joinForm').reset();
             document.getElementById('createForm').reset();
             showLoginTab('join');
@@ -1093,6 +1240,10 @@
             activeBtn.classList.remove('text-slate-600', 'dark:text-slate-400');
 
             if (tabName === 'polls') renderPollsTab();
+            if (tabName === 'gas') {
+                const gbm = document.getElementById('gasBillMonth');
+                if (gbm && !gbm.value) gbm.value = selectedMonth;
+            }
         }
 
         function getDaysInMonth(yearMonthStr) {
@@ -1156,8 +1307,27 @@
                 grandTotalBazar += (Number(item.amount) || 0);
             });
 
+            let grandTotalGas = 0;
+            gasBillData.filter(item => item.billMonth && item.billMonth.startsWith(selectedMonth)).forEach(item => {
+                grandTotalGas += (Number(item.amount) || 0);
+            });
+
+            // 🎯 মিল রেট = শুধু বাজার ÷ মোট মিল (গ্যাস বাদ)
             const mealRate = grandTotalMeals > 0 ? (grandTotalBazar / grandTotalMeals) : 0;
-            return { daysInMonth, memberMealTotals, grandTotalMeals, memberDepositTotals, grandTotalDeposit, grandTotalBazar, mealRate };
+
+            // 🎯 গ্যাস শেয়ার = মোট গ্যাস ÷ মোট মেম্বার সংখ্যা (সমান ভাগ)
+            const memberCount = members.length;
+            const gasSharePerMember = memberCount > 0 ? (grandTotalGas / memberCount) : 0;
+
+            // তথ্য দেখানোর জন্য মোট খরচ
+            const grandTotalCost = grandTotalBazar + grandTotalGas;
+
+            return {
+                daysInMonth, memberMealTotals, grandTotalMeals,
+                memberDepositTotals, grandTotalDeposit,
+                grandTotalBazar, grandTotalGas, grandTotalCost,
+                mealRate, gasSharePerMember, memberCount
+            };
         }
 
         function renderAll() {
@@ -1167,6 +1337,7 @@
             renderPollsTab();
             renderDepositTab();
             renderBazarTab();
+            renderGasTab();
             renderSummaryTab();
             updateTopMetrics();
         }
@@ -1176,6 +1347,7 @@
             document.getElementById('totalMessMeals').textContent = stats.grandTotalMeals.toFixed(2);
             document.getElementById('totalMessDeposit').textContent = stats.grandTotalDeposit.toLocaleString('bn-BD');
             document.getElementById('totalMessBazar').textContent = stats.grandTotalBazar.toLocaleString('bn-BD');
+            document.getElementById('totalGasBill').textContent = stats.grandTotalGas.toLocaleString('bn-BD');
             document.getElementById('currentMealRate').textContent = stats.mealRate.toFixed(2);
         }
 
@@ -1270,6 +1442,9 @@
             grid.innerHTML = members.map(m => {
                 const totalMeals = stats.memberMealTotals[m.id] || 0;
                 const totalDeposit = stats.memberDepositTotals[m.id] || 0;
+                const mealCost = totalMeals * stats.mealRate;
+                const gasShare = stats.gasSharePerMember;
+                const totalCost = mealCost + gasShare;
                 const initials = (m.name || '?').trim().charAt(0);
                 return `
                     <div class="bg-slate-50 dark:bg-slate-800/60 rounded-2xl p-4 border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition">
@@ -1286,14 +1461,18 @@
                                 <button onclick="requireAdmin(() => deleteMember('${m.id}'))" class="p-1.5 text-slate-500 hover:text-rose-600 hover:bg-rose-50 dark:hover:bg-rose-950/50 rounded-lg transition"><i class="fa-solid fa-trash-can"></i></button>
                             </div>
                         </div>
-                        <div class="grid grid-cols-2 gap-2 text-center pt-3 border-t border-slate-200 dark:border-slate-700/60">
+                        <div class="grid grid-cols-3 gap-2 text-center pt-3 border-t border-slate-200 dark:border-slate-700/60">
                             <div class="bg-white dark:bg-slate-900 p-2 rounded-xl border border-slate-100 dark:border-slate-800">
-                                <span class="text-[10px] text-slate-400 font-semibold uppercase block">মোট মিল</span>
+                                <span class="text-[10px] text-slate-400 font-semibold uppercase block">মিল</span>
                                 <span class="text-sm font-bold text-indigo-600 dark:text-indigo-400">${totalMeals.toFixed(2)}</span>
                             </div>
                             <div class="bg-white dark:bg-slate-900 p-2 rounded-xl border border-slate-100 dark:border-slate-800">
-                                <span class="text-[10px] text-slate-400 font-semibold uppercase block">মোট জমা</span>
+                                <span class="text-[10px] text-slate-400 font-semibold uppercase block">জমা</span>
                                 <span class="text-sm font-bold text-emerald-600 dark:text-emerald-400">৳${totalDeposit}</span>
+                            </div>
+                            <div class="bg-white dark:bg-slate-900 p-2 rounded-xl border border-slate-100 dark:border-slate-800">
+                                <span class="text-[10px] text-slate-400 font-semibold uppercase block">খরচ</span>
+                                <span class="text-sm font-bold text-rose-600 dark:text-rose-400">৳${totalCost.toFixed(0)}</span>
                             </div>
                         </div>
                     </div>`;
@@ -1402,7 +1581,7 @@
             showToast(`${member.name}-এর জন্য অ্যাপ্লাই!`);
         }
 
-        // 🗳️ DAILY POLLS
+        // DAILY POLLS
         function getPollForDate(dateStr) {
             if (!polls[dateStr]) {
                 polls[dateStr] = { m: { votes: {} }, l: { votes: {} }, d: { votes: {} } };
@@ -1556,9 +1735,7 @@
             container.innerHTML = html;
         }
 
-        // Vote modal — শুধু এডমিনের জন্য
         function openVoteQtyModal(dateStr, mealType, memberId, voteValue) {
-            // 🔒 পারমিশন চেক
             if (!isAdmin) {
                 showToast('🔒 ভোট দিতে এডমিন লগইন করুন', 'error');
                 pendingAdminCallback = () => {
@@ -1618,7 +1795,6 @@
 
         function confirmVoteWithQty() {
             if (!pendingVote) return;
-            // 🔒 Double-check admin
             if (!isAdmin) {
                 closeVoteQtyModal();
                 showToast('🔒 ভোট দিতে এডমিন লগইন করুন', 'error');
@@ -1755,13 +1931,12 @@
                     const member = members.find(m => m.id === item.memberId) || { name: 'অজানা' };
                     sum += Number(item.amount) || 0;
                     const catText = item.category || 'বাজার';
-                    const isGas = catText.includes('গ্যাস') || catText.includes('Gas');
                     return `
                         <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40 transition">
                             <td class="p-3 font-medium text-slate-700 dark:text-slate-300">${item.date}</td>
                             <td class="p-3 font-semibold text-slate-800 dark:text-slate-100">${member.name}</td>
                             <td class="p-3">
-                                <span class="px-2.5 py-1 rounded-full text-[10px] font-bold ${isGas ? 'bg-amber-100 dark:bg-amber-950 text-amber-800 dark:text-amber-300 border border-amber-300 dark:border-amber-800' : 'bg-slate-100 dark:bg-slate-800 text-indigo-700 dark:text-indigo-300 border border-slate-200 dark:border-slate-700'}">${catText}</span>
+                                <span class="px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-100 dark:bg-slate-800 text-indigo-700 dark:text-indigo-300 border border-slate-200 dark:border-slate-700">${catText}</span>
                             </td>
                             <td class="p-3 text-slate-600 dark:text-slate-400">${item.note || '-'}</td>
                             <td class="p-3 font-bold text-rose-600 dark:text-rose-400 text-right">৳${Number(item.amount).toLocaleString('bn-BD')}</td>
@@ -1797,17 +1972,124 @@
             showToast('ডিলিট');
         }
 
+        // 🔥 GAS BILL
+        function renderGasTab() {
+            const gasMemberSelect = document.getElementById('gasBillMemberSelect');
+            if (gasMemberSelect) gasMemberSelect.innerHTML = members.map(m => `<option value="${m.id}">${m.name}</option>`).join('');
+            const editGasMemberSelect = document.getElementById('editGasMemberSelect');
+            if (editGasMemberSelect) editGasMemberSelect.innerHTML = members.map(m => `<option value="${m.id}">${m.name}</option>`).join('');
+
+            const currentGas = gasBillData.filter(item => item.billMonth && item.billMonth.startsWith(selectedMonth));
+            const listTable = document.getElementById('gasListTable');
+            let sum = 0;
+
+            if (currentGas.length === 0) {
+                listTable.innerHTML = `<tr><td colspan="6" class="p-4 text-center text-slate-400">এই মাসে কোনো গ্যাস বিল নেই</td></tr>`;
+            } else {
+                listTable.innerHTML = currentGas.map(item => {
+                    const member = members.find(m => m.id === item.memberId) || { name: 'অজানা' };
+                    sum += Number(item.amount) || 0;
+                    return `
+                        <tr class="hover:bg-orange-50 dark:hover:bg-orange-950/20 transition">
+                            <td class="p-3 font-semibold text-orange-700 dark:text-orange-300">${getBengaliMonthYear(item.billMonth)}</td>
+                            <td class="p-3 font-medium text-slate-700 dark:text-slate-300">${item.date}</td>
+                            <td class="p-3 font-semibold text-slate-800 dark:text-slate-100">${member.name}</td>
+                            <td class="p-3 text-slate-600 dark:text-slate-400">${item.note || '-'}</td>
+                            <td class="p-3 font-bold text-orange-600 dark:text-orange-400 text-right">৳${Number(item.amount).toLocaleString('bn-BD')}</td>
+                            <td class="p-3 text-center">
+                                <div class="flex items-center justify-center gap-1.5">
+                                    <button onclick="requireAdmin(() => openEditGasModal('${item.id}'))" class="text-indigo-600 hover:text-indigo-800 hover:bg-indigo-50 dark:hover:bg-indigo-950 p-1.5 rounded-lg transition"><i class="fa-solid fa-pen-to-square"></i></button>
+                                    <button onclick="requireAdmin(() => deleteGas('${item.id}'))" class="text-rose-500 hover:text-rose-700 hover:bg-rose-50 dark:hover:bg-rose-950 p-1.5 rounded-lg transition"><i class="fa-solid fa-trash-can"></i></button>
+                                </div>
+                            </td>
+                        </tr>`;
+                }).join('');
+            }
+            document.getElementById('gasTotalSum').textContent = sum.toLocaleString('bn-BD');
+        }
+        function handleAddGasBill(e) {
+            e.preventDefault();
+            requireAdmin(() => {
+                const billMonth = document.getElementById('gasBillMonth').value;
+                const date = document.getElementById('gasBillDate').value;
+                const memberId = document.getElementById('gasBillMemberSelect').value;
+                const amount = parseFloat(document.getElementById('gasBillAmount').value) || 0;
+                const note = document.getElementById('gasBillNote').value.trim();
+                if (!billMonth) { showToast('বিলের মাস দিন', 'error'); return; }
+                if (!date) { showToast('তারিখ দিন', 'error'); return; }
+                if (amount <= 0) { showToast('সঠিক পরিমাণ দিন', 'error'); return; }
+
+                gasBillData.push({ id: 'g_' + Date.now(), billMonth, date, memberId, amount, note });
+                pushDataToFirebase();
+                document.getElementById('gasBillAmount').value = '';
+                document.getElementById('gasBillNote').value = '';
+                renderAll();
+                showToast('✅ গ্যাস বিল সেভ হয়েছে!');
+            });
+        }
+        function openEditGasModal(id) {
+            const gas = gasBillData.find(g => g.id === id);
+            if (!gas) return;
+            document.getElementById('editGasId').value = gas.id;
+            document.getElementById('editGasMonth').value = gas.billMonth;
+            document.getElementById('editGasDate').value = gas.date;
+            document.getElementById('editGasMemberSelect').value = gas.memberId;
+            document.getElementById('editGasAmount').value = gas.amount;
+            document.getElementById('editGasNote').value = gas.note || '';
+            document.getElementById('editGasModal').classList.remove('hidden');
+        }
+        function closeEditGasModal() { document.getElementById('editGasModal').classList.add('hidden'); }
+        function saveEditGas() {
+            const id = document.getElementById('editGasId').value;
+            const billMonth = document.getElementById('editGasMonth').value;
+            const date = document.getElementById('editGasDate').value;
+            const memberId = document.getElementById('editGasMemberSelect').value;
+            const amount = parseFloat(document.getElementById('editGasAmount').value) || 0;
+            const note = document.getElementById('editGasNote').value.trim();
+            if (amount <= 0) { showToast('সঠিক পরিমাণ দিন', 'error'); return; }
+            const gas = gasBillData.find(g => g.id === id);
+            if (gas) {
+                gas.billMonth = billMonth; gas.date = date; gas.memberId = memberId;
+                gas.amount = amount; gas.note = note;
+                pushDataToFirebase();
+                closeEditGasModal();
+                renderAll();
+                showToast('আপডেট!');
+            }
+        }
+        function deleteGas(id) {
+            if (confirm('গ্যাস বিল ডিলিট করবেন?')) {
+                gasBillData = gasBillData.filter(g => g.id !== id);
+                pushDataToFirebase();
+                renderAll();
+                showToast('ডিলিট');
+            }
+        }
+
         // SUMMARY
         function renderSummaryTab() {
             const stats = calculateStats();
+            document.getElementById('summaryBazarTotal').textContent = stats.grandTotalBazar.toLocaleString('bn-BD');
+            document.getElementById('summaryGasTotal').textContent = stats.grandTotalGas.toLocaleString('bn-BD');
+            document.getElementById('summaryGasPerPerson').textContent = stats.gasSharePerMember.toFixed(2);
+            document.getElementById('summaryTotalCost').textContent = stats.grandTotalCost.toLocaleString('bn-BD');
+            document.getElementById('summaryMealRate').textContent = stats.mealRate.toFixed(2);
+
             const tbody = document.getElementById('summaryTableBody');
-            if (members.length === 0) { tbody.innerHTML = `<tr><td colspan="5" class="p-4 text-center text-slate-400">কোনো মেম্বার নেই</td></tr>`; return; }
+            if (members.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" class="p-4 text-center text-slate-400">কোনো মেম্বার নেই</td></tr>`;
+                return;
+            }
+
             tbody.innerHTML = members.map(m => {
                 const totalMeals = stats.memberMealTotals[m.id] || 0;
                 const mealCost = totalMeals * stats.mealRate;
+                const gasShare = stats.gasSharePerMember;
+                const totalCost = mealCost + gasShare;
                 const totalDeposit = stats.memberDepositTotals[m.id] || 0;
-                const finalBalance = totalDeposit - mealCost;
+                const finalBalance = totalDeposit - totalCost;
                 const isPlus = finalBalance >= 0;
+
                 return `
                     <tr class="hover:bg-slate-50 dark:hover:bg-slate-800/40 font-medium">
                         <td class="p-3.5 font-semibold text-slate-800 dark:text-slate-100 flex items-center gap-2">
@@ -1815,7 +2097,14 @@
                             <span>${m.name}</span>
                         </td>
                         <td class="p-3.5 text-center text-slate-700 dark:text-slate-300 font-bold">${totalMeals.toFixed(2)}</td>
-                        <td class="p-3.5 text-right text-rose-600 dark:text-rose-400 font-medium">৳${mealCost.toFixed(1)}</td>
+                        <td class="p-3.5 text-right text-rose-600 dark:text-rose-400 font-medium">
+                            ৳${mealCost.toFixed(1)}
+                            <p class="text-[10px] text-slate-400">(${totalMeals.toFixed(2)} × ৳${stats.mealRate.toFixed(2)})</p>
+                        </td>
+                        <td class="p-3.5 text-right text-orange-600 dark:text-orange-400 font-medium">
+                            ৳${gasShare.toFixed(2)}
+                            <p class="text-[10px] text-slate-400">(সমান ভাগ)</p>
+                        </td>
                         <td class="p-3.5 text-right text-emerald-600 dark:text-emerald-400 font-bold">৳${totalDeposit}</td>
                         <td class="p-3.5 text-right font-bold text-xs ${isPlus ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300' : 'bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300'}">
                             ${isPlus ? 'পাবে: +' : 'দিবে: '}৳${Math.abs(finalBalance).toFixed(1)}
@@ -1829,13 +2118,22 @@
             const stats = calculateStats();
             let csvContent = "data:text/csv;charset=utf-8,\uFEFF";
             csvContent += `Mess: ${messDetails.name} (${currentMessId})\nMonth: ${getBengaliMonthYear(selectedMonth)}\n\n`;
-            csvContent += `Member,Total Meals,Meal Cost (BDT),Total Deposit (BDT),Final Balance (BDT)\n`;
+            csvContent += `=== COST SUMMARY ===\n`;
+            csvContent += `Total Bazar,${stats.grandTotalBazar}\n`;
+            csvContent += `Total Gas Bill,${stats.grandTotalGas}\n`;
+            csvContent += `Total Cost,${stats.grandTotalCost}\n`;
+            csvContent += `Total Meals,${stats.grandTotalMeals}\n`;
+            csvContent += `Meal Rate (only bazar),${stats.mealRate.toFixed(2)}\n`;
+            csvContent += `Gas Share per Member,${stats.gasSharePerMember.toFixed(2)}\n\n`;
+            csvContent += `Member,Total Meals,Meal Cost (BDT),Gas Share (BDT),Total Cost (BDT),Total Deposit (BDT),Final Balance (BDT)\n`;
             members.forEach(m => {
                 const totalMeals = stats.memberMealTotals[m.id] || 0;
-                const mealCost = (totalMeals * stats.mealRate).toFixed(1);
+                const mealCost = totalMeals * stats.mealRate;
+                const gasShare = stats.gasSharePerMember;
+                const totalCost = mealCost + gasShare;
                 const totalDeposit = stats.memberDepositTotals[m.id] || 0;
-                const finalBalance = (totalDeposit - mealCost).toFixed(1);
-                csvContent += `"${m.name}",${totalMeals},${mealCost},${totalDeposit},${finalBalance}\n`;
+                const finalBalance = totalDeposit - totalCost;
+                csvContent += `"${m.name}",${totalMeals},${mealCost.toFixed(1)},${gasShare.toFixed(2)},${totalCost.toFixed(1)},${totalDeposit},${finalBalance.toFixed(1)}\n`;
             });
             const encodedUri = encodeURI(csvContent);
             const link = document.createElement("a");
